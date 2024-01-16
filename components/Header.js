@@ -171,7 +171,7 @@ const Header = () => {
                                     </li>
                                     <li>
                                         <div className={styles.address}>
-                                            <Link href="https://goo.gl/maps/Vd2oB7YVTJQNJpNM6" target={'_blank'}>
+                                            <Link href="https://maps.app.goo.gl/QQwp1pN4BrHFPUk56" target={'_blank'}>
                                                 <FaBuilding className={`${styles.icon}`} />
                                                 1210,1212 , National IT Park, Main Shahrah-e-Faisal, 74200, Karachi-Pakistan.
                                             </Link>

@@ -66,30 +66,6 @@ const Contact = () => {
             }
         })
 
-
-
-        let headersList = {
-            "Accept": "*/*",
-            "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-            "Authorization": "Bearer ke2br2ubssi4l8mxswjjxohtd37nzexy042l2eer",
-            "Content-Type": "application/json"
-        }
-
-        let bodyContent = JSON.stringify({
-            "IP": `${ip.IPv4} - ${ip.country_name} - ${ip.city}`,
-            "Brand": "Crystallite",
-            "Page": `${currentRoute}`,
-            "Date": currentdate,
-            "Time": currentdate,
-            "JSON": JSONdata,
-
-        });
-
-        await fetch("https://sheetdb.io/api/v1/1ownp6p7a9xpi", {
-            method: "POST",
-            body: bodyContent,
-            headers: headersList
-        });
         const { pathname } = router;
         if (pathname == pathname) {
             window.location.href = '/thank-you';
@@ -125,7 +101,7 @@ const Contact = () => {
                                     </Link>
                                 </div>
                                 <div className={`${styles.infoLinks} ${styles.address}`}>
-                                    <Link href="https://goo.gl/maps/Vd2oB7YVTJQNJpNM6" target={'_blank'}>
+                                    <Link href="https://maps.app.goo.gl/QQwp1pN4BrHFPUk56" target={'_blank'}>
                                         <FaBuilding className={`${styles.icon}`} />
                                         1210,1212 , National IT Park, Main Shahrah-e-Faisal, 74200, Karachi-Pakistan.
                                     </Link>
@@ -147,7 +123,7 @@ const Contact = () => {
                                     <Col xl={12} className='mt-3'>
                                         <textarea type="textarea" name="message" id="messages" placeholder="Message" required />
                                     </Col>
-                                    <Col xl={12} className='mt-4'>
+                                    <Col xl={12} className='mt-0 mt-lg-4'>
                                         <button value={score} id="savebtns" type="submit" className='primary-btn'>{score}</button>
                                     </Col>
                                 </Row>

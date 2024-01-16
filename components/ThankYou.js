@@ -35,7 +35,7 @@ const Thankyou = () => {
                                                 <FaLinkedinIn />
                                             </Link>
                                         </div>
-                                        <div className={styles.search}>
+                                        {/* <div className={styles.search}>
                                             <div className={`${styles.searchIcon}  mx-auto`}>
                                                 <Link href="/career">
                                                     <Image
@@ -44,7 +44,7 @@ const Thankyou = () => {
                                                     />
                                                 </Link>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div>
