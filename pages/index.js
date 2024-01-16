@@ -25,7 +25,7 @@ export default function Home() {
         {/* canonical */}
         <link rel="canonical" href="https://crystallite-digital.vercel.app/" />
       </Head>
-      <FullPage /> 
+      <FullPage />
     </>
   )
 }

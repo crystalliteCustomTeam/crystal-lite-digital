@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { useRouter } from 'next/router';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import Axios from "axios";
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from '@/styles/Contact.module.css';
 import { FaPhoneAlt, FaEnvelope, FaBuilding } from "react-icons/fa";
@@ -9,20 +9,93 @@ import { FaPhoneAlt, FaEnvelope, FaBuilding } from "react-icons/fa";
 
 const Contact = () => {
 
-    const [formvalue, setFormvalue] = useState({ name: '', email: '', phone: '', message: '' });
-
-    const handleInput = (e) => {
-        setFormvalue({ ...formvalue, [e.target.name]: e.target.value });
+    const [ip, setIP] = useState('');
+    const getIPData = async () => {
+        const res = await Axios.get('https://geolocation-db.com/json/f2e84010-e1e9-11ed-b2f8-6b70106be3c8');
+        setIP(res.data);
     }
+    useEffect(() => {
+        getIPData()
+    }, [])
+
+
+    const [score, setScore] = useState('Submit');
+
+
+    const router = useRouter();
+    const currentRoute = router.pathname;
+    const [pagenewurl, setPagenewurl] = useState('');
+    useEffect(() => {
+        const pagenewurl = window.location.href;
+        console.log(pagenewurl);
+        setPagenewurl(pagenewurl);
+    }, []);
+
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
+        var currentdate = new Date().toLocaleString() + ''
 
-        const formData = { name: formvalue.name, email: formvalue.email, phone: formvalue.phone, message: formvalue.message };
+        const data = {
+            name: e.target.name.value,
+            email: e.target.email.value,
+            phone: e.target.phone.value,
+            message: e.target.message.value,
+            pageUrl: pagenewurl,
+            IP: `${ip.IPv4} - ${ip.country_name} - ${ip.city}`,
+            currentdate: currentdate,
+        }
 
-        const res = await axios.post("http://localhost/reactcrudphp/api/user.php", formData);
+        const JSONdata = JSON.stringify(data)
 
-    };
+        setScore('Sending Data');
+        console.log(JSONdata);
+
+
+        fetch('api/emailapi/route', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSONdata
+        }).then((res) => {
+            console.log(`Response received ${res}`)
+            if (res.status === 200) {
+                console.log(`Response Successed ${res}`)
+            }
+        })
+
+
+
+        let headersList = {
+            "Accept": "*/*",
+            "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+            "Authorization": "Bearer ke2br2ubssi4l8mxswjjxohtd37nzexy042l2eer",
+            "Content-Type": "application/json"
+        }
+
+        let bodyContent = JSON.stringify({
+            "IP": `${ip.IPv4} - ${ip.country_name} - ${ip.city}`,
+            "Brand": "Crystallite",
+            "Page": `${currentRoute}`,
+            "Date": currentdate,
+            "Time": currentdate,
+            "JSON": JSONdata,
+
+        });
+
+        await fetch("https://sheetdb.io/api/v1/1ownp6p7a9xpi", {
+            method: "POST",
+            body: bodyContent,
+            headers: headersList
+        });
+        const { pathname } = router;
+        if (pathname == pathname) {
+            window.location.href = '/thank-you';
+        }
+    }
+
 
     return (
         <>
@@ -60,50 +133,22 @@ const Contact = () => {
                             </div>
                         </Col>
                         <Col lg={6}>
-                            <form className={styles.contactForm} onSubmit={handleSubmit} method="POST">
+                            <form className={styles.contactForm} id="contactusform1" onSubmit={handleSubmit}>
                                 <Row>
                                     <Col xl={12} className='mt-3'>
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            placeholder="Name"
-                                            required
-                                            value={formvalue.name}
-                                            onChange={handleInput}
-                                        />
+                                        <input type="text" name="name" id="name" placeholder="Full Name" required />
                                     </Col>
                                     <Col xl={12} className='mt-3'>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            placeholder="Email"
-                                            required
-                                            value={formvalue.email}
-                                            onChange={handleInput}
-                                        />
+                                        <input type="email" name="email" placeholder="Email Address" required />
                                     </Col>
                                     <Col xl={12} className='mt-3'>
-                                        <input
-                                            type="text"
-                                            name="phone"
-                                            placeholder="Phone"
-                                            maxLength="10"
-                                            required
-                                            value={formvalue.phone}
-                                            onChange={handleInput}
-                                        />
+                                        <input type="tel" minLength="7" maxLength="15" pattern="[0-9]*" name="phone" id="phone" placeholder="Phone" required />
                                     </Col>
                                     <Col xl={12} className='mt-3'>
-                                        <textarea
-                                            name="message"
-                                            placeholder="Message"
-                                            required
-                                            value={formvalue.message}
-                                            onChange={handleInput}>
-                                        </textarea>
+                                        <textarea type="textarea" name="message" id="messages" placeholder="Message" required />
                                     </Col>
                                     <Col xl={12} className='mt-4'>
-                                        <button type="submit" className='primary-btn'>Submit</button>
+                                        <button value={score} id="savebtns" type="submit" className='primary-btn'>{score}</button>
                                     </Col>
                                 </Row>
                             </form>
