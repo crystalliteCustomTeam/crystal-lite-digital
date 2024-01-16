@@ -1,0 +1,82 @@
+.banner {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.busIntRow {
+  align-items: center;
+}
+
+.busIntBanner h1::before {
+  content: url(https://imagedelivery.net/nJwaBs__P2JfMUeYJ4vmjQ/fbbcaed9-4160-454a-9096-26b2c31e4000/public);
+  position: absolute;
+  left: -330px;
+  bottom: -80px;
+}
+
+.busIntBanner h1 {
+  position: relative;
+  font-size: 65px;
+  font-weight: 400;
+  font-family: "SF-Regular", sans-serif;
+}
+
+.busIntBanner h1 span {
+  font-family: "SF-Bold", sans-serif;
+  background: linear-gradient(to right, #c35427 0%, #ea9c2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  font-size: 65px;
+}
+
+.busIntBanner p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #5f5f5f;
+}
+
+/* ==========================Media-Queries========================== */
+
+@media screen and (max-width: 991px) {
+  .busIntBanner h1,
+  .busIntBanner h1 span {
+    font-size: 45px;
+  }
+
+  .busIntBanner h1::before {
+    display: none;
+  }
+
+  .busIntBanner p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner {
+    height: auto;
+    padding-top: 50px;
+  }
+
+  .busIntBanner{
+    margin-top: 50px;
+  }
+
+  .busIntRow {
+    row-gap: 50px;
+  }
+
+  .busIntBanner h1,
+  .busIntBanner h1 span {
+    font-size: 30px;
+  }
+
+  .busIntBanner p {
+    font-size: 16px;
+  }
+
+}

@@ -1,0 +1,122 @@
+.dedhostingService {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dedhostingRow {
+  justify-content: center;
+}
+
+.dedhostingBody {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.dedhostingBody h2 {
+  color: #2c2c2c;
+  line-height: 70px;
+  font-family: "SF-Regular", sans-serif;
+  letter-spacing: 1px;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.dedhostingBody p,
+.dedlist p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5f5f5f;
+  margin-bottom: 8px;
+}
+
+.dedlist h2 span {
+  font-family: "SF-Bold", sans-serif;
+  background: linear-gradient(to right, #c35427 0%, #ea9c2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 35px;
+}
+
+.listItems {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 40px;
+  margin-top: 25px;
+}
+
+.listItems li {
+  list-style: none;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #5f5f5f;
+}
+
+.listItems li::before {
+  content: url(https://imagedelivery.net/nJwaBs__P2JfMUeYJ4vmjQ/6ae0bb72-4dc3-44ea-9e65-e67d4af32a00/public);
+  position: absolute;
+  left: -40px;
+  top: -2px;
+}
+
+/* ==========================Media-Queries========================== */
+
+@media screen and (max-width: 991px) {
+  .dedhostingService {
+    padding: 50px 0;
+    height: auto;
+  }
+
+  .dedhostingBody {
+    margin-bottom: 30px;
+  }
+
+  .dedhostingBody h2 {
+    font-size: 45px;
+  }
+
+  .dedhostingBody p, .dedlist p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .dedhostingBody p br, .dedlist p br {
+    display: none;
+  }
+
+  .dedlist h2 span {
+    font-size: 30px;
+  }
+
+  .listItems li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .dedhostingService {
+    padding: 50px 0 0 0;
+  }
+
+  .dedhostingBody h2 {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  .dedhostingBody {
+    margin-bottom: 20px;
+  }
+
+  .dedlist h2 span {
+    font-size: 25px;
+  }
+
+}

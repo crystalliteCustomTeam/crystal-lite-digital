@@ -1,0 +1,289 @@
+.banner {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  will-change: opacity;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+}
+
+.bgVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.bannerBody {
+  will-change: opacity;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.bannerContent {
+  width: 100%;
+}
+
+.shadedText {
+  position: absolute;
+  left: -158px;
+  top: 26%;
+  z-index: -1;
+  letter-spacing: 20px;
+  margin: 15px 0;
+}
+
+.shadedText h1 {
+  font-size: 210px;
+  transform: rotate(-90deg);
+  height: 100%;
+  font-family: "Atomic";
+  color: hsla(0, 0%, 100%, 0.25);
+}
+
+.social {
+  position: absolute;
+  top: 85px;
+  left: 10px;
+  width: 225px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.socialIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.borderLine {
+  width: 2px;
+  height: 120px;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.84);
+  margin: 1rem 0;
+  border: 0;
+}
+
+.socialIcon a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.socialIcon a:hover {
+  color: #e87341;
+}
+
+.searchIcon {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-color: #eac2b0;
+  border: 4px solid #f3ddd3;
+}
+
+.searchIcon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.searchIcon a img {
+  width: 20px;
+  height: 20px;
+  color: #141414;
+}
+
+.bannerText {
+  position: absolute;
+  top: 22%;
+  left: 22%;
+  color: #fff;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+
+.bannerText h1 {
+  color: #fff;
+  font-size: 65px;
+  font-family: "SF-Light", sans-serif;
+}
+
+.bannerText h1 span {
+  font-family: "SF-Bold", sans-serif;
+  background: linear-gradient(to right, #c35427 0%, #ea9c2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  font-size: 80px;
+}
+
+.lead p {
+  font-family: "SF-Light", sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #fff;
+  margin: 0 0 16px 0;
+}
+
+/* ==========================Media-Queries========================== */
+
+@media screen and (min-width: 1805px) {
+  .bannerBody .social {
+    top: 235px !important;
+  }
+  .shadedText {
+    top: 35%;
+  }
+  .bannerText {
+    top: 25%;
+  }
+  .bannerText h1 {
+    font-size: 80px;
+  }
+  .bannerText h1 span {
+    font-size: 120px;
+  }
+  .bannerText p {
+    font-size: 36px;
+  }
+  .bannerText button {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1504px) {
+  .bannerBody .social {
+    top: 132px;
+  }
+  .shadedText {
+    top: 30%;
+  }
+  .bannerText h1 {
+    font-size: 70px;
+  }
+  .bannerText h1 span {
+    font-size: 100px;
+  }
+  .bannerText p {
+    font-size: 30px;
+  }
+  .bannerText button {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 1299px) {
+  
+  .bannerBody .social {
+    top: 120px;
+  }
+
+  .shadedText {
+    top: 29%;
+  }
+
+  .bannerText {
+    top: 27%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .bannerText {
+    left: 25%;
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  .shadedText {
+    left: -130px;
+    top: 38%;
+  }
+
+  .bannerBody .social {
+    top: 320px;
+  }
+
+  .shadedText h1 {
+    font-size: 160px;
+  }
+
+  .social {
+    width: 165px;
+    margin-top: 0px;
+  }
+
+  .socialIcon {
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+
+  .borderLine {
+    height: 100px;
+  }
+
+  .socialIcon a {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .searchIcon {
+    height: 25px;
+    width: 25px;
+  }
+
+  .searchIcon a img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .bannerText {
+    top: 38%;
+    left: 25%;
+  }
+
+  .bannerText h1,
+  .bannerText h1 span {
+    font-size: 45px;
+  }
+
+  .lead p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .shadedText {
+    display: none;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .bannerText {
+    position: relative;
+    left: 0;
+    top: 120%;
+  }
+
+  .bannerText h1,
+  .bannerText h1 span {
+    font-size: 40px;
+  }
+}

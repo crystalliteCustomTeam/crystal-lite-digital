@@ -1,0 +1,114 @@
+.banner {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.aboutRow {
+  align-items: center;
+}
+
+.aboutBanner h1::before {
+  content: url(https://imagedelivery.net/nJwaBs__P2JfMUeYJ4vmjQ/fbbcaed9-4160-454a-9096-26b2c31e4000/public);
+  position: absolute;
+  right: 0;
+  bottom: 195px;
+}
+
+.aboutBanner h1 {
+  position: relative;
+}
+
+.aboutBanner h1 span {
+  font-family: "SF-Bold", sans-serif;
+  background: linear-gradient(to right, #c35427 0%, #ea9c2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  font-size: 65px;
+}
+
+.aboutBanner p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #5f5f5f;
+}
+
+.aboutBody {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.aboutBody h2 {
+  color: #2c2c2c;
+  line-height: 70px;
+  font-family: "SF-Regular", sans-serif;
+  letter-spacing: 1px;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.aboutBody p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #5f5f5f;
+  margin-bottom: 8px;
+}
+
+/* ==========================Media-Queries========================== */
+
+@media screen and (max-width: 991px) {
+  .aboutBanner h1 span {
+    font-size: 45px;
+  }
+
+  .aboutBanner h1::before {
+    display: none;
+  }
+
+  .aboutBanner p {
+    font-size: 16px;
+  }
+
+  .aboutBody h2 {
+    font-size: 40px;
+  }
+
+  .aboutBody p {
+    font-size: 14px;
+  }
+
+  .aboutBody {
+    height: auto;
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner {
+    height: auto;
+    padding-top: 50px;
+  }
+
+  .aboutRow {
+    row-gap: 50px;
+  }
+
+  .aboutBanner h1,
+  .aboutBanner h1 span {
+    font-size: 30px;
+  }
+
+  .aboutBanner p {
+    font-size: 16px;
+  }
+
+  .aboutBanner {
+    margin-top: 50px;
+  }
+}

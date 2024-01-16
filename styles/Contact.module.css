@@ -1,0 +1,133 @@
+.contact {
+  width: 100%;
+  height: 100vh;
+  background: url(../public/images/banners/footer_bg.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.contactContent h2 {
+  font-weight: 500;
+  font-family: "SF-Regular", sans-serif;
+  font-size: 65px;
+  color: #2c2c2c;
+}
+
+.contactContent h2 span {
+  font-family: "SF-Bold", sans-serif;
+  background: linear-gradient(to right, #c35427 0%, #ea9c2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  font-size: 60px;
+}
+
+.contactContent p {
+  font-family: "SF-Light", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  color: #212529;
+}
+
+.contactContent h5 {
+  color: #2c2c2c;
+  font-weight: 500;
+  font-size: 26px;
+  font-family: "SF-Regular", sans-serif;
+  margin-bottom: 10px;
+}
+
+.infoLinks {
+  margin-bottom: 20px;
+}
+
+.infoLinks a {
+  color: #2c2c2c;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+}
+
+.infoLinks a:hover {
+  color: #e87341;
+}
+
+.infoLinks a:hover svg {
+  color: #2c2c2c;
+}
+
+.contactForm input,
+.contactForm textarea {
+  font-size: 18px;
+  color: #000000;
+  font-weight: 600;
+  width: 100%;
+  border: inherit;
+  border-bottom: 1px solid #9c9c9c;
+  padding: 0;
+  outline: inherit;
+  background-color: transparent;
+}
+
+.contactForm input {
+  height: 45px;
+}
+
+.contactForm textarea {
+  height: 150px;
+  resize: none;
+}
+
+.address a {
+  align-items: flex-start;
+}
+
+.address svg {
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+/* ==========================Media-Queries========================== */
+
+@media screen and (max-width: 991px) {
+  .contact {
+    height: auto;
+    padding: 30px 0;
+    background-position: right;
+  }
+
+  .contactContent h2,
+  .contactContent h2 span {
+    font-size: 45px;
+  }
+
+  .contactContent h5 {
+    font-size: 20px;
+  }
+
+  .contactContent p {
+    font-size: 16px;
+  }
+
+  .infoLinks a {
+    font-size: 15px;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contactContent h2,
+  .contactContent h2 span {
+    font-size: 30px;
+  }
+}

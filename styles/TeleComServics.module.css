@@ -1,0 +1,106 @@
+.teleService {
+  padding: 50px 0;
+}
+
+.tabsRow {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.teleServ h2 {
+  color: #2c2c2c;
+  font-size: 40px;
+  line-height: 45px;
+  font-family: "SF-Regular", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.teleServ p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #5f5f5f;
+  margin-bottom: 16px;
+}
+
+.teleServ h5 {
+  font-family: "SF-Bold", sans-serif;
+  background: linear-gradient(to right, #c35427 0%, #ea9c2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  font-size: 25px;
+  margin-bottom: 16px;
+}
+
+.teleServiceRow {
+  row-gap: 15px;
+}
+
+.teleCards {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 11%);
+  padding: 10px;
+  transition: all 0.3s;
+  width: 500px;
+}
+
+.teleCards img {
+  width: 60px;
+  height: 65px;
+  transition: all 0.3s;
+}
+
+.teleCards span {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c2c2c;
+  display: block;
+  transition: all 0.3s;
+}
+
+.teleCards:hover {
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgb(195, 84, 39) 0%,
+    rgb(234, 156, 43) 100%
+  );
+  border-radius: inherit;
+}
+
+.teleCards:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.teleCards:hover span {
+  color: #fff;
+}
+
+/* ==========================Media-Queries========================== */
+
+@media screen and (max-width: 991px) {
+  .teleCards {
+    width: 100%;
+  }
+
+  .teleServ h2 {
+    font-size: 30px;
+  }
+
+  .teleServ p {
+    font-size: 14px;
+  }
+
+  .teleServ h5 {
+    font-size: 20px;
+  }
+}
+

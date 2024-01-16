@@ -1,0 +1,115 @@
+.manageITService {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.manageITServiceRow {
+  row-gap: 15px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.manageITServ,
+.manageServc {
+  text-align: center;
+}
+
+.manageITServ h2 {
+  color: #2c2c2c;
+  font-size: 60px;
+  line-height: 45px;
+  font-family: "SF-Regular", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.manageITServ p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #5f5f5f;
+  margin-bottom: 30px;
+}
+
+.manageServc h5 {
+  font-family: "SF-Bold", sans-serif;
+  background: linear-gradient(to right, #c35427 0%, #ea9c2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+.iconMainRow {
+  row-gap: 50px;
+}
+
+.iconRow {
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+}
+
+.iconRow img {
+  margin-bottom: 8px;
+}
+
+.iconRow p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #2c2c2c;
+}
+
+/* ==========================Media-Queries========================== */
+
+@media screen and (max-width: 991px) {
+  .manageITService {
+    height: auto;
+    padding: 50px 0 0 0;
+  }
+
+  .manageITServ h2 {
+    font-size: 45px;
+  }
+
+  .manageITServ p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .manageITServ p br {
+    display: none;
+  }
+
+  .manageServc h5 {
+    font-size: 30px;
+  }
+
+  .iconRow, .iconMainRow {
+    row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .manageITCards {
+    width: 100%;
+  }
+
+  .manageITServ h2 {
+    font-size: 30px;
+  }
+
+  .manageITServ h5 {
+    font-size: 20px;
+  }
+
+  .manageServc h5 {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+}

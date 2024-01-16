@@ -1,0 +1,82 @@
+.careerRow {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.careerContent {
+  position: relative;
+  left: -150px;
+}
+
+.careerContent h2 {
+  font-family: "SF-Regular", sans-serif;
+  color: #141414;
+  font-size: 60px;
+}
+
+.careerContent h2 span {
+  font-family: "SF-Bold", sans-serif;
+  background: linear-gradient(to right, #c35427 0%, #ea9c2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  font-size: 60px;
+}
+
+.careerContent p {
+  font-family: "SF-Light", sans-serif;
+  font-size: 24px;
+}
+
+.form{
+  margin-top: 20px;
+}
+
+
+/* ==========================Media-Queries========================== */
+
+@media screen and (max-width: 1199px) {
+  .careerContent h2 {
+    font-size: 45px;
+  }
+
+  .careerContent h2 span {
+    font-size: 45px;
+  }
+
+  .careerContent p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .career {
+    padding: 0 0 20px 0;
+  }
+
+  .careerContent {
+    left: 0px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .form button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .careerRow img{
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .careerContent h2 {
+    font-size: 30px;
+  }
+
+  .careerContent h2 span {
+    font-size: 30px;
+  }
+
+}
