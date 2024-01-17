@@ -1,6 +1,6 @@
 import React from "react";
 //
-const ReactFullpage = React.lazy(() => import("@fullpage/react-fullpage"));
+import ReactFullpage from "@fullpage/react-fullpage";
 //
 const DigtalMarktngBanner = React.lazy(() => import("@/components/DigtalMarktngBanner"));
 const DigtalMarktngServics = React.lazy(() => import("@/components/DigtalMarktngServics"));

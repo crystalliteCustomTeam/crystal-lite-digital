@@ -1,6 +1,6 @@
 import React from "react";
 //
-const ReactFullpage = React.lazy(() => import("@fullpage/react-fullpage"));
+import ReactFullpage from "@fullpage/react-fullpage";
 //
 const CwsBanner = React.lazy(() => import("@/components/CwsBanner"));
 const CwsServices = React.lazy(() => import("@/components/CwsServices"));
