@@ -83,9 +83,9 @@ const Contact = () => {
                                 <h2>Let's Get <br /> <span>Started</span></h2>
                                 <p>Some of the greatest things in life start with a <br /> simple conversation. We welcome you to call, <br /> email, or simply use the magic form to the right.</p>
                                 <div className={styles.infoLinks}>
-                                    <Link href="mailto:info@crystal-lite.net">
+                                    <Link href="mailto:info@crystallitedigital.com">
                                         <FaEnvelope className={styles.icon} />
-                                        info@crystal-lite.net
+                                        info@crystallitedigital.com
                                     </Link>
                                 </div>
                                 <div className={styles.infoLinks}>

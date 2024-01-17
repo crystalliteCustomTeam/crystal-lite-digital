@@ -147,9 +147,9 @@ const Header = () => {
                                 <ul className={styles.subMenu}>
                                     <li>
                                         <div className={styles.infoLinks}>
-                                            <Link href="mailto:info@crystal-lite.net">
+                                            <Link href="mailto:info@crystallitedigital.com">
                                                 <FaEnvelope className={styles.icon} />
-                                                info@crystal-lite.net
+                                                info@crystallitedigital.com
                                             </Link>
                                         </div>
                                     </li>
