@@ -89,12 +89,6 @@ const Contact = () => {
                                     </Link>
                                 </div>
                                 <div className={styles.infoLinks}>
-                                    <Link href="mailto:hr@crystal-lite.net">
-                                        <FaEnvelope className={styles.icon} />
-                                        hr@crystal-lite.net
-                                    </Link>
-                                </div>
-                                <div className={styles.infoLinks}>
                                     <Link href="tel:021-111 22 55 77">
                                         <FaPhoneAlt className={styles.icon} />
                                         021-111 22 55 77

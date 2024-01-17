@@ -188,7 +188,6 @@
 }
 
 @media screen and (max-width: 1299px) {
-  
   .bannerBody .social {
     top: 120px;
   }
@@ -207,7 +206,6 @@
     left: 25%;
   }
 }
-
 
 @media screen and (max-width: 991px) {
   .shadedText {
@@ -254,7 +252,7 @@
 
   .bannerText {
     top: 38%;
-    left: 25%;
+    left: 5%;
   }
 
   .bannerText h1,
@@ -265,9 +263,11 @@
   .lead p {
     font-size: 16px;
   }
-}
 
-@media screen and (max-width: 767px) {
+  .bgVideo {
+    display: none;
+  }
+
   .shadedText {
     display: none;
   }
@@ -275,7 +275,9 @@
   .social {
     display: none;
   }
+}
 
+@media screen and (max-width: 767px) {
   .bannerText {
     position: relative;
     left: 0;

@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image'
+import { useRouter } from 'next/router';
 import { Container, Row, Col } from 'react-bootstrap';
-import Navbar from 'react-bootstrap/Navbar';
-import { FaPhoneAlt, FaEnvelope, FaBuilding, FaBars, FaRegWindowClose, FaFacebookSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import styles from '../styles/Header.module.css'
 //
+import { FaPhoneAlt, FaEnvelope, FaBuilding, FaBars, FaRegWindowClose, FaFacebookSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+//
+import Navbar from 'react-bootstrap/Navbar';
+//
 import logo from '../public/images/logo.svg'
-
 
 const Header = () => {
 
     const [isActive, setIsActive] = useState(false);
-
     const handleMenu = () => {
         setIsActive((prev) => !prev);
     }
@@ -99,46 +99,6 @@ const Header = () => {
                                         Business Intelligence
                                     </Link>
                                 </li>
-                                {/* <li>
-                                    <Link href="/telecommunication/" onClick={handleMenu}>
-                                        Telecommunication
-                                    </Link>
-                                </li> 
-                                <li>
-                                    <Link href="#" onClick={handleMenu}>
-                                        Blog Writing
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" onClick={handleMenu}>
-                                        Website Content
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" onClick={handleMenu}>
-                                        Article Writing
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" onClick={handleMenu}>
-                                        Book Publishing
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" onClick={handleMenu}>
-                                        Book Writing
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" onClick={handleMenu}>
-                                        Ebook Writing
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" onClick={handleMenu}>
-                                        Copy Writing
-                                    </Link>
-                                </li> */}
                             </ul>
                         </Col>
                         <Col md={4}>
@@ -150,14 +110,6 @@ const Header = () => {
                                             <Link href="mailto:info@crystallitedigital.com">
                                                 <FaEnvelope className={styles.icon} />
                                                 info@crystallitedigital.com
-                                            </Link>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className={styles.infoLinks}>
-                                            <Link href="mailto:hr@crystal-lite.net">
-                                                <FaEnvelope className={styles.icon} />
-                                                hr@crystal-lite.net
                                             </Link>
                                         </div>
                                     </li>
