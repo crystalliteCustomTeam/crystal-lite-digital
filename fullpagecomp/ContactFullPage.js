@@ -1,6 +1,7 @@
-import ReactFullpage from '@fullpage/react-fullpage';
-import ContactBanner from '@/components/ContactBanner';
-import Contact from '@/components/Contact'
+import React from "react";
+const ReactFullpage = React.lazy(() => import("@fullpage/react-fullpage"));
+const ContactBanner = React.lazy(() => import("@/components/ContactBanner")); 
+const Contact = React.lazy(() => import("@/components/Contact"));
 
 const FullPage = () => {
     return (

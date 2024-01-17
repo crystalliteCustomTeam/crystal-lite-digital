@@ -1,5 +1,6 @@
-import Head from 'next/head';
-import Thankyou from '@/components/ThankYou';
+import Head from 'next/head'; 
+import React from "react";
+const Thankyou = React.lazy(() => import("@/components/ThankYou"));
 
 
 export default function thankyou() {

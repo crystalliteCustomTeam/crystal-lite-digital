@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import FullPage from '../fullpagecomp/SmmFullPage';
+import React from "react";
+const FullPage = React.lazy(() => import("@/fullpagecomp/SmmFullPage"));
 
 
 export default function SocialMediaMarketing() {

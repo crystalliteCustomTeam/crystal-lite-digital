@@ -1,5 +1,6 @@
-import Head from 'next/head';
-import FullPage from '../fullpagecomp/TelecomFullPage';
+import Head from 'next/head'; 
+import React from "react";
+const FullPage = React.lazy(() => import("@/fullpagecomp/TelecomFullPage"));
 
 
 export default function Telecommunication() {

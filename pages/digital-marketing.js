@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import FullPage from '../fullpagecomp/DigitalMarFullPage';
-
+import React from "react"; 
+const FullPage = React.lazy(() => import("@/fullpagecomp/DigitalMarFullPage"));
 
 export default function DigitalMarketing() {
     return (

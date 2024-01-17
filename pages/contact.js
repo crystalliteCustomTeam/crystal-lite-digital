@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import FullPage from '../fullpagecomp/ContactFullPage';
+import React from "react"; 
+const FullPage = React.lazy(() => import("@/fullpagecomp/ContactFullPage"));
 
 
 export default function Contact() {

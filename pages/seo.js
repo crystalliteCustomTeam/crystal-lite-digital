@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import FullPage from '../fullpagecomp/SeoFullPage';
+import React from "react";
+const FullPage = React.lazy(() => import("@/fullpagecomp/SeoFullPage"));
 
 
 export default function SearchEngineOptimization() {

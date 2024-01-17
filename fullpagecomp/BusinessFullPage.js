@@ -1,8 +1,9 @@
-import ReactFullpage from '@fullpage/react-fullpage';
-import BusinessBanner from '@/components/BusinessBanner';
-import BusinessAbt from '@/components/BusinessAbt';
-import BusinessServics from '@/components/BusinessServics';
-import Contact from '@/components/Contact'
+import React from "react";
+const ReactFullpage = React.lazy(() => import("@fullpage/react-fullpage"));
+const BusinessBanner = React.lazy(() => import("@/components/BusinessBanner"));
+const BusinessAbt = React.lazy(() => import("@/components/BusinessAbt"));
+const BusinessServics = React.lazy(() => import("@/components/BusinessServics"));
+const Contact = React.lazy(() => import("@/components/Contact")); 
 
 const FullPage = () => {
     return (

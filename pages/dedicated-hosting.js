@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import FullPage from '../fullpagecomp/DedHostingFullPage';
+import React from "react"; 
+const FullPage = React.lazy(() => import("@/fullpagecomp/DedHostingFullPage")); 
 
 
 export default function DedicatedHosting() {

@@ -1,30 +1,31 @@
-import ReactFullpage from '@fullpage/react-fullpage';
-import CareerBanner from '@/components/CareerBanner';
-import CareerServics from '@/components/CareerServics';
-import Contact from '@/components/Contact'
+import React from "react";
+const ReactFullpage = React.lazy(() => import("@fullpage/react-fullpage"));
+const CareerBanner = React.lazy(() => import("@/components/CareerBanner"));
+const CareerServics = React.lazy(() => import("@/components/CareerServics"));
+const Contact = React.lazy(() => import("@/components/Contact"));
 
 const FullPage = () => {
-    return (
-        <ReactFullpage
-            scrollingSpeed={1000}
-            navigation
-            render={() => {
-                return (
-                    <>
-                        <div className="section">
-                            <CareerBanner />
-                        </div>
-                        <div className="section">
-                            <CareerServics />
-                        </div>
-                        <div className="section">
-                            <Contact />
-                        </div>
-                    </>
-                );
-            }}
-        />
-    );
+  return (
+    <ReactFullpage
+      scrollingSpeed={1000}
+      navigation
+      render={() => {
+        return (
+          <>
+            <div className="section">
+              <CareerBanner />
+            </div>
+            <div className="section">
+              <CareerServics />
+            </div>
+            <div className="section">
+              <Contact />
+            </div>
+          </>
+        );
+      }}
+    />
+  );
 };
 
 export default FullPage;

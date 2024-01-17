@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import FullPage from '../fullpagecomp/ContentWriteFullPage';
+import React from "react"; 
+const FullPage = React.lazy(() => import("@/fullpagecomp/ContentWriteFullPage"));
 
 
 export default function ContentWritingServices() {
