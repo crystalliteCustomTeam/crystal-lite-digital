@@ -1,5 +1,7 @@
 import React from "react";
+//
 const ReactFullpage = React.lazy(() => import("@fullpage/react-fullpage"));
+//
 const HomeBanner = React.lazy(() => import("@/components/HomeBanner"));
 const Journey = React.lazy(() => import("@/components/Journey"));
 const Services = React.lazy(() => import("@/components/Services"));

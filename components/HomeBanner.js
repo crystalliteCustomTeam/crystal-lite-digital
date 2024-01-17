@@ -1,12 +1,8 @@
 import React from 'react'
 import Link from 'next/link';
-import Image from 'next/image'
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import styles from '@/styles/HomeBanner.module.css';
-//
-import search from '../public/images/icons/search-icon.png'
-
 
 const HomeBanner = () => {
     return (
@@ -34,16 +30,6 @@ const HomeBanner = () => {
                                                 <FaLinkedinIn />
                                             </Link>
                                         </div>
-                                        {/* <div className={styles.search}>
-                                            <div className={`${styles.searchIcon}  mx-auto`}>
-                                                <Link href="/career">
-                                                    <Image
-                                                        src={search}
-                                                        alt="search"
-                                                    />
-                                                </Link>
-                                            </div>
-                                        </div> */}
                                     </div>
                                     <Container>
                                         <Row>

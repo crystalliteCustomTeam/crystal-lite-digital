@@ -1,14 +1,10 @@
 import React from "react";
+//
 const ReactFullpage = React.lazy(() => import("@fullpage/react-fullpage"));
-const TranscriptionBanner = React.lazy(() =>
-  import("@/components/TranscriptionBanner")
-);
-const TranscriptionAbt = React.lazy(() =>
-  import("@/components/TranscriptionAbt")
-);
-const TranscriptionServics = React.lazy(() =>
-  import("@/components/TranscriptionServics")
-);
+//
+const TranscriptionBanner = React.lazy(() => import("@/components/TranscriptionBanner"));
+const TranscriptionAbt = React.lazy(() => import("@/components/TranscriptionAbt"));
+const TranscriptionServics = React.lazy(() => import("@/components/TranscriptionServics"));
 const Contact = React.lazy(() => import("@/components/Contact"));
 
 const FullPage = () => {

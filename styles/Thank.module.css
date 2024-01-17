@@ -1,9 +1,6 @@
 .thnks {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  width: 100%;
 }
 
 .thnks .thnksBody {
@@ -17,8 +14,9 @@
   line-height: 70px;
   font-weight: 600;
   color: #fff;
+  margin-bottom: 0;
+  text-align: center;
   font-family: "SF-Bold";
-  margin-bottom: 30px;
 }
 
 .primaryBtn {
@@ -52,9 +50,4 @@
 .primaryBtn:hover::after {
   right: -25px;
   opacity: 1;
-}
-
-.searchIcon a img {
-  width: 20px;
-  height: 20px;
 }
