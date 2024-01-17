@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
-//
-const FullPage = React.lazy(() => import("@/fullpagecomp/BusinessFullPage"));
+// 
+const FullPage = React.lazy(() => import("@/fullpagecomp/AboutFullPage"));
 
-export default function BusinessIntelligence() {
+export default function About() {
   return (
     <>
       <Head>

@@ -1,9 +1,9 @@
 import React from "react";
 import Head from 'next/head';
 //
-const FullPage = React.lazy(() => import("@/fullpagecomp/SeoFullPage"));
+const FullPage = React.lazy(() => import("@/fullpagecomp/ContactFullPage"));
 
-export default function SearchEngineOptimization() {
+export default function Contact() {
     return (
         <>
             <Head>
