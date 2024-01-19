@@ -10,7 +10,7 @@ import MetaData from "@/components/MetaData";
 
 export default function App({ Component, pageProps }) {
 
-  // =======================================
+  // =========================================
   const [imagesLoaded, setImagesLoaded] = useState(false);
   useEffect(() => {
     const delay = 5000;
@@ -19,11 +19,11 @@ export default function App({ Component, pageProps }) {
     }, delay);
     return () => clearTimeout(timeoutId);
   }, []);
-  // =======================================
+  // =========================================
   const sluginer = useRouter().asPath;
   const weblink = "https://crystallitedigital.com/";
   const newcol = weblink + sluginer;
-  // =======================================
+  // =========================================
 
   return (
     <>
