@@ -8,6 +8,7 @@ export default function Telecommunication() {
         <>
             <Head>
                 <meta charset="UTF-8" />
+                <meta name="robots" content="noindex" />
                 {/* Meta Tags & OG Tags Added Through Route */}
             </Head>
             <FullPage />
