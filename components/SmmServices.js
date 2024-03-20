@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import Image from 'next/image'
 import { Container, Row, Col } from 'react-bootstrap';
 import { MDBTabs, MDBTabsItem, MDBTabsLink, MDBTabsContent, MDBTabsPane } from 'mdb-react-ui-kit';
@@ -12,23 +13,24 @@ import icon5 from '../public/images/icons/smm-1.png'
 import icon6 from '../public/images/icons/proofreading-1.png'
 import icon7 from '../public/images/icons/sector.png'
 import icon8 from '../public/images/icons/sector-1.png'
+import download from '../public/images/download.png'
 
 
 const SmmServices = () => {
 
+    const opnen = () => {
+        window.open('../MetaPartner.pdf', '_blank');
+    }
 
     const [basicActive, setBasicActive] = useState('tab1');
-
     const handleBasicClick = (value, string) => {
         if (value === basicActive) {
             return;
         }
-
         setBasicActive(value);
     };
 
     const [selectedService, setSelectedService] = useState('tab1');
-
     const handleSelectChange = (event) => {
         setSelectedService(event.target.value);
     };
@@ -110,6 +112,9 @@ const SmmServices = () => {
                                             place.We will help you reach your targeted audience using the most sought-after
                                             social media platform.
                                         </p>
+                                        <Link className={`${styles.download} download mt-3`} href="#" onClick={opnen}>
+                                            <Image src={download} className='img-fluid' alt='Crystallite' />
+                                        </Link>
                                     </div>
                                 </MDBTabsPane>
                                 <MDBTabsPane show={basicActive === 'tab2'}>

@@ -104,6 +104,11 @@
   height: 70px;
 }
 
+.download img {
+  width: auto;
+  height: auto;
+}
+
 /* ==========================Media-Queries========================== */
 
 @media screen and (max-width: 991px) {
